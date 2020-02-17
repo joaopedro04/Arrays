@@ -106,7 +106,20 @@ exercicio7()
 console.log(' ');
 
 //----------------------------------------------------------------------------------------
-//console.log('8 - Faça um Programa que peça a idade e a altura de 5 pessoas, armazene cada informação no seu respectivo vetor. Imprima a idade e a altura na ordem inversa a ordem lida.');
+console.log('8 - Faça um Programa que peça a idade e a altura de 5 pessoas, armazene cada informação no seu respectivo vetor. Imprima a idade e a altura na ordem inversa a ordem lida.');
+function exercicio8() {
+    const array = [];
+    const pessoa1 = [20, 1.50];
+    const pessoa2 = [30, 1.80];
+    const pessoa3 = [40, 1.60];
+    const pessoa4 = [70, 1.70];
+    const pessoa5 = [10, 1.50];
+    array.push(pessoa1,pessoa2,pessoa3,pessoa4,pessoa5);
+    console.log('8 => Ordem lida',array);
+    const newArray = array.reverse();
+    console.log('8 => Ordem reversa',newArray);
+}
+exercicio8();
 
 //----------------------------------------------------------------------------------------
 console.log('9 - Faça um Programa que leia um vetor A com 10 números inteiros, calcule e mostre a soma dos quadrados dos elementos do vetor.');
@@ -114,7 +127,7 @@ function exercicio9() {
     const A = [2,3,4,5,6,7,8,9,10,11];
     const B = [];
     for(let i = 0; i <= A.length; i++){
-        B.push(Math.pow(A[i], 2));
+        B.push(Math.pow(parseInt(A[i]), 2));
     }
     return console.log('9 => ', B)
 }
@@ -122,4 +135,39 @@ exercicio9();
 console.log(' ');
 
 //----------------------------------------------------------------------------------------
-console.log('10 - ');
+console.log('10 - Faça um Programa que leia dois vetores com 10 elementos cada. Gere um terceiro vetor de 20 elementos, cujos valores deverão ser compostos pelos elementos intercalados dos dois outros vetores.');
+function exercicio10() {
+    const vetA = [];
+    const vetB = [];
+    const vetAB = [];
+    for(let i = 0; i < 10; i++) {
+        vetA.push(Math.floor(Math.random()*1000));
+        vetB.push(Math.floor(Math.random()*1000));
+        vetAB.push(vetA[i]);
+        vetAB.push(vetB[i]);
+    }
+    console.log('10 => ',vetAB.sort((a,b) => {
+        return a - b;
+    }));
+}
+exercicio10();
+
+console.log('11 - Altere o programa anterior, intercalando 3 vetores de 10 elementos cada.');
+function exercicio10() {
+    const vetA = [];
+    const vetB = [];
+    const vetC = [];
+    const vetABC = [];
+    for(let i = 0; i < 10; i++) {
+        vetA.push(Math.floor(Math.random()*1000));
+        vetB.push(Math.floor(Math.random()*1000));
+        vetC.push(Math.floor(Math.random()*1000));
+        vetABC.push(vetA[i]);
+        vetABC.push(vetB[i]);
+        vetABC.push(vetC[i]);
+    }
+    console.log('10 => ',vetABC.sort((a,b) => {
+        return a - b;
+    }));
+}
+exercicio10();
