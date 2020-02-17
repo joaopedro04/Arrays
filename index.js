@@ -171,3 +171,22 @@ function exercicio10() {
     }));
 }
 exercicio10();
+
+//
+console.log('')
+console.log('****** letra repetida na palavra ********');
+function letraRepetida() {
+    const a = 'aabbccdd';
+    const newarray = a.split('');
+    const letraRepeat = [];
+    for(let i = 0; i < newarray.length; i++) {
+        if(newarray[i] == newarray[i+1]) {
+            const letters = `${newarray[i]}`;
+            letraRepeat.push(letters);
+        } else {
+            continue;
+        }
+    }
+    console.log('Letras repetidas => ',letraRepeat);
+}
+letraRepetida();
