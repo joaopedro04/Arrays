@@ -153,7 +153,7 @@ function exercicio10() {
 exercicio10();
 
 console.log('11 - Altere o programa anterior, intercalando 3 vetores de 10 elementos cada.');
-function exercicio10() {
+function exercicio11() {
     const vetA = [];
     const vetB = [];
     const vetC = [];
@@ -166,27 +166,21 @@ function exercicio10() {
         vetABC.push(vetB[i]);
         vetABC.push(vetC[i]);
     }
-    console.log('10 => ',vetABC.sort((a,b) => {
+    console.log('11 => ',vetABC.sort((a,b) => {
         return a - b;
     }));
 }
-exercicio10();
+exercicio11();
 
 //
 console.log('')
 console.log('****** letra repetida na palavra ********');
 function letraRepetida() {
-    const a = 'aabbccdd';
-    const newarray = a.split('');
-    const letraRepeat = [];
-    for(let i = 0; i < newarray.length; i++) {
-        if(newarray[i] == newarray[i+1]) {
-            const letters = `${newarray[i]}`;
-            letraRepeat.push(letters);
-        } else {
-            continue;
-        }
-    }
-    console.log('Letras repetidas => ',letraRepeat);
+    const palavra = 'joao pedro souza da silva';
+    const newPalavra = palavra.split('');
+    const arraySemDuplicados = [...new Set(newPalavra)];
+    console.log('Letra repetida => ', arraySemDuplicados);
 }
 letraRepetida();
+
+console.log('')
